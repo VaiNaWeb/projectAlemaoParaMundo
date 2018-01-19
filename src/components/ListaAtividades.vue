@@ -17,6 +17,25 @@
 </template>
 
 <script>
+import NoixQFaz from '../../static/imagens/Noix Q Faz/noixqfaz1.jpg'
+import ViDancar from '../../static/imagens/VIdançar/vidancar.jpg'
+import SlamLaje from '../../static/imagens/SlamLaje/slamlaje1.jpg'
+import CasaBrota from '../../static/imagens/CasaBrota/Casa Brota Coworking de Favela.jpg'
+import ClasseD from '../../static/imagens/Classe D/D - classed1.jpg'
+import AfroLaje from '../../static/imagens/Afro Laje/D - afrolaje1.jpg'
+import CriancasFelizes from '../../static/imagens/projeto-criancas-felizes/Logo Projeto Crianças Felizes.jpg'
+import RaizesMovimento from '../../static/imagens/Raízes em Movimentos/raizesemmovimento2.jpg'
+import GatoMidia from '../../static/imagens/Gato Mídia/12768127_1556038881375883_2486605588657018434_o.jpg'
+import MovimentoVida from '../../static/imagens/instituto movimento e vida/movimentoevida3jpg.jpg'
+import CRJ from '../../static/imagens/crj/crj1.jpg'
+import NovosLideres from '../../static/imagens/Novos Líderes/novoslideres.jpg'
+import FavelaFashion from '../../static/imagens/favela é fashion/fashion2.jpg'
+import BrigadeiroLiterario from '../../static/imagens/Brigadeiros Literários/Brigadeiros Literários.jpg'
+import ClubeLuta from '../../static/imagens/Clube de lutas do complexo/clubedelutas3.jpg'
+import NaveConhecimento from '../../static/imagens/Nave do Conhecimento/navedoconhecimento.jpg'
+import SambaFavela from '../../static/imagens/Samba Favela/sambadefavela2.jpg'
+import CasaPrima from '../../static/imagens/Casa das Primas Doceria/Logo Casa das Primas Doceria.png'
+
 export default{
 	name:'ListaAtividades',
 	props:{
@@ -30,113 +49,111 @@ export default{
 	},
 	data(){
 		return{
-
 			atividades:[
 				{
-					imagem:'../static/imagens/Noix Q Faz/noixqfaz1.jpg',
+					imagem: NoixQFaz,
 					nome: 'Noix Q Faz',
 					segmento: 'Arte e Cultura',
 					subSegmento: 'Graffiti'
 				},
 				{
-					imagem:'../static/imagens/VIdançar/vidancar.jpg',
+					imagem: ViDancar,
 					nome: 'Vidançar',
 					segmento: 'Arte e Cultura',
 					subSegmento: 'Dança'
 				},
 				{
-					imagem:'../static/imagens/SlamLaje/slamlaje1.jpg',
+					imagem: SlamLaje,
 					nome: 'Slam Laje',
 					segmento: 'Coletivo',
 					subSegmento: 'Cultura'
 				},
 				{
-					imagem: '../static/imagens/CasaBrota/Casa Brota Coworking de Favela.jpg',
+					imagem: CasaBrota,
 					nome: 'Casa Brota',
 					segmento: 'Coletivo',
 					subSegmento: 'Coworking'
 				},
 				{
-					imagem: '../static/imagens/Classe D/D - classed1.jpg',
+					imagem: ClasseD,
 					nome: 'Classe D – Ateliê de Ideias',
 					segmento: 'Arte e Cultura',
 					subSegmento: 'Graffiti'
 				},
 				{
-					imagem:'../static/imagens/Afro Laje/D - afrolaje1.jpg',
+					imagem: AfroLaje,
 					nome: 'Afro Laje',
 					segmento: 'Coletivo',
 					subSegmento: 'Cultura'
 				},
 				{
-					imagem:'../static/imagens/projeto-criancas-felizes/Logo Projeto Crianças Felizes.jpg',
+					imagem: CriancasFelizes,
 					nome: 'Crianças Felizes',
 					segmento: 'Coletivo',
 					subSegmento: 'Assistência Social'
 				},
 				{
-					imagem:'../static/imagens/Raízes em Movimentos/raizesemmovimento2.jpg',
+					imagem: RaizesMovimento,
 					nome: 'Instituto Raízes Em Movimento',
 					segmento: 'ONG',
 					subSegmento: 'Cidania e Desenvolvimento'
 				},
 				{
-					imagem: '../static/imagens/Gato Mídia/12768127_1556038881375883_2486605588657018434_o.jpg',
+					imagem: GatoMidia,
 					nome: 'GatoMÍDIA',
 					segmento: 'Educação',
 					subSegmento: 'Comunicação'
-				}
-				,
+				},
 				{
-					imagem: '../static/imagens/instituto movimento e vida/movimentoevida3jpg.jpg',
+					imagem: MovimentoVida,
 					nome: 'Instituto Movimento & Vida',
 					segmento: 'Esporte e Atividade Física',
 					subSegmento: 'Fisioterapia'
 				},
 				{
-					imagem: '../static/imagens/crj/crj1.jpg',
+					imagem: CRJ,
 					nome: 'CRJ Alemão',
 					segmento: 'Arte e Cultura',
 					subSegmento: 'Educação'
 				},
 				{
-					imagem: '../static/imagens/Novos Líderes/novoslideres.jpg',
-					nome: 'Novo Líderes',
+					imagem: NovosLideres,
+					nome: 'Novos Líderes',
 					segmento: 'ONG',
 					subSegmento: 'Cidania e Desenvolvimento'
 				},
 				{
-					imagem: '../static/imagens/favela é fashion/fashion2.jpg',
-					nome: 'Favela é FaShion',
+					imagem: FavelaFashion,
+					nome: 'Favela é Fashion',
 					segmento: 'Coletivo',
 					subSegmento: 'Moda'
 				},
 				{
-					imagem: '../static/imagens/Brigadeiros Literários/Brigadeiros Literários.jpg',
+					imagem: BrigadeiroLiterario,
 					nome: 'Brigadeiros Literários',
 					segmento: 'Alimentação',
 					subSegmento: 'Doceria'
 				},
 				{
-					imagem: '../static/imagens/Clube de lutas do complexo/clubedelutas3.jpg',
+					imagem: ClubeLuta,
 					nome: 'Clube de Luta do Complexo',
 					segmento: 'Esporte e Atividade Física',
 					subSegmento: 'Arte Marcial'
 				},
 				{
-					imagem: '../static/imagens/Nave do Conhecimento/navedoconhecimento.jpg',
+					imagem: NaveConhecimento,
 					nome: 'Nave do Conhecimento Nova Brasília',
 					segmento: 'Educação',
 					subSegmento: 'Tecnologia'
 				},
 				{
-					imagem: '../static/imagens/Samba Favela/sambadefavela2.jpg',
+					imagem: SambaFavela,
 					nome: 'Samba Favela',
 					segmento: 'Arte e Cultura',
 					subSegmento: 'Musica'
 				},
 				{
-					imagem: '../static/imagens/Casa das Primas Doceria/Logo Casa das Primas Doceria.png',
+					imagem: CasaPrima,
 					nome: 'Casa das Primas Doceria',
 					segmento: 'Alimentação',
 					subSegmento: 'Doceria'

@@ -56,6 +56,28 @@
 	</div>
 </template>
 <script>
+
+import CasaBrota from '../../static/imagens/CasaBrota/Casa Brota Coworking de Favela.jpg'
+import ClasseD from '../../static/imagens/Classe D/D - classed2.jpg'
+import ClasseDM from '../../static/imagens/Classe D/M - classed.jpg'
+import RaizesMovimento from '../../static/imagens/Raízes em Movimentos/raizesemmovimento1.jpg'
+import NoixQFaz from '../../static/imagens/Noix Q Faz/noixqfaz1.jpg'
+import ViDancar from '../../static/imagens/VIdançar/vidancar.jpg'
+import SlamLaje from '../../static/imagens/SlamLaje/slamlaje1.jpg'
+import AfroLaje from '../../static/imagens/Afro Laje/D - afrolaje1.jpg'
+import AfroLajeM from '../../static/imagens/Afro Laje/M - afrolaje.jpg'
+import CriancasFelizes from '../../static/imagens/projeto-criancas-felizes/criancasfelizes1.jpg'
+import GatoMidia from '../../static/imagens/Gato Mídia/D - 23379978_1864848067161628_7307016498340374063_n.jpg'
+import MovimentoeVida from '../../static/imagens/instituto movimento e vida/movimentoevida1.jpg'
+import CRJ from '../../static/imagens/crj/D - crj.jpg'
+import NovosLideres from '../../static/imagens/Novos Líderes/novoslideres1.jpg'
+import FavelaFashion from '../../static/imagens/favela é fashion/fashion.jpg'
+import BrigadeiroLiterario from '../../static/imagens/Brigadeiros Literários/Brigadeiros Literários.jpg'
+import ClubeLuta from '../../static/imagens/Clube de lutas do complexo/clubedelutas4.jpg'
+import NaveConhecimento from '../../static/imagens/Nave do Conhecimento/navedoconhecimento1.jpg'
+import SambaFavela from '../../static/imagens/Samba Favela/sambadefavela2.jpg'
+import CasaPrimas from '../../static/imagens/Casa das Primas Doceria/Logo Casa das Primas Doceria.png'
+
 	export default{
 		name: 'Atividade',
 		props:{
@@ -70,8 +92,8 @@
 				atividades: [
 					{
 						nome: 'Casa Brota',
-						imagem: '../../static/imagens/CasaBrota/Casa Brota Coworking de Favela.jpg',
-						imagemMobile: '../../static/imagens/CasaBrota/Casa Brota Coworking de Favela.jpg',
+						imagem: CasaBrota,
+						imagemMobile: CasaBrota,
 						sobre: [
 							'Coworking de Favela, um espaço de conexão com foco na promoção cultural da favela e no desenvolvimento econômico das micro empresas.',
 							'Empreender a partir das criações e subjetividade de cada indivíduo, visando expandir e fortalecer as redes destes espaços populares para além da favela.',
@@ -88,8 +110,8 @@
 					},
 					{
 						nome: 'Classe D – Ateliê de Ideias',
-						imagem: '../../static/imagens/Classe D/D - classed2.jpg',
-						imagemMobile: '../../static/imagens/Classe D/M - classed.jpg',
+						imagem: ClasseD,
+						imagemMobile: ClasseDM,
 						sobre: [
 							'O Coletivo Classe-D é formado por um grupo de amigos que se conheceram pelas ruas do Rio de Janeiro fazendo graffiti por volta do início dos anos 2000.',
 							'Mas só em 2012 que parte deste coletivo começou a pensar profissionalmente em suas habilidades com produções de arte e comunicação visual. A partir de então tem se desenvolvido gradativamente seus aprendizados, trabalhando para oferecer um serviço de qualidade e com características ousadas, com'
@@ -105,8 +127,8 @@
 					},
 					{
 						nome: 'Instituto Raízes Em Movimento',
-						imagem: '../../static/imagens/Raízes em Movimentos/raizesemmovimento1.jpg',
-						imagemMobile: '../../static/imagens/Raízes em Movimentos/raizesemmovimento1.jpg',
+						imagem: RaizesMovimento,
+						imagemMobile: RaizesMovimento,
 						sobre: [
 							'O INSTITUTO RAÍZES EM MOVIMENTO tem como missão promover o desenvolvimento humano, social e cultural do Complexo do Alemão e demais comunidades por meio da participação de atores locais como protagonistas desses processos, tendo como foco o fortalecimento e ampliação do capital social dessas comunidades'
 						],
@@ -121,8 +143,8 @@
 					},
 					{
 						nome: 'Noix Q Faz',
-						imagem: '../../static/imagens/Noix Q Faz/noixqfaz1.jpg',
-						imagemMobile: '../../static/imagens/Noix Q Faz/noixqfaz1.jpg',
+						imagem: NoixQFaz,
+						imagemMobile: NoixQFaz,
 						sobre: [
 							'Somos um grupo de grafiteiros moradores do Complexo do Alemão, sendo cada um de uma localidade da favela. Resolvemos nos reunir para revitalizar espaços que precisam de reparos, o coletivo, batizado de "Noix Q Faz #Cpx", escolheu a quadra da comunidade do Reservatório para começar seu trabalho, todo custeado pelos próprios moradores. Uma das missões do coletivo é levar ação a todos os lugares que estejam precisando de uma transformação e permitir que o grafite se multiplique pela favela.'
 						],
@@ -137,8 +159,8 @@
 					},
 					{
 						nome: 'Vidançar',
-						imagem: '../../static/imagens/VIdançar/vidancar.jpg',
-						imagemMobile: '../../static/imagens/VIdançar/vidancar.jpg',
+						imagem: ViDancar,
+						imagemMobile: ViDancar,
 						sobre: [
 							'Atuam com aulas de dança, teatro, apoio escolar e atendimento jurídico às famílias. O projeto iniciou as atividades no ano de 2009 com 14 crianças. Atualmente são 145 assistidos diretamente e 300 assistidos indiretamente.',
 							'O Vidançar conseguiu inserir 2 alunos no balé Bolshoi e 4 no Theatro Municipal. Além da aprovação de todos os alunos durante 3 anos consecutivos.'
@@ -154,8 +176,8 @@
 					},
 					{
 						nome: 'Slam Laje',
-						imagem: '../static/imagens/SlamLaje/slamlaje1.jpg',
-						imagemMobile: '../static/imagens/SlamLaje/slamlaje1.jpg',
+						imagem: SlamLaje,
+						imagemMobile: SlamLaje,
 						sobre: [
 							'Fundado por moradores da região, o Slam Laje é a primeira batalha de poesia do Complexo do Alemão.',
 							'O objetivo é incentivar a poesia e a literatura marginal, fortalecendo o movimento cultural dentro da favela com muito passinho, batalhas de rimas, de uma forma sagaz e resistente.',
@@ -172,8 +194,8 @@
 					},
 					{
 						nome: 'Afro Laje',
-						imagem: '../../static/imagens/Afro Laje/D - afrolaje1.jpg',
-						imagemMobile: '../../static/imagens/Afro Laje/M - afrolaje.jpg',
+						imagem: AfroLaje,
+						imagemMobile: AfroLajeM,
 						sobre: [
 							' A Associação Cultural Afrolaje  é um grupo cultural que atua fazendo a disseminação do jongo com quem tem o interesse em aprender esta cultura popular que é oriunda do Rio de Janeiro.',
  							'O grupo tem sede no Engenho de dentro e faz uma grande atuação pela Zona Norte.',
@@ -190,8 +212,8 @@
 					},
 					{
 						nome: 'Crianças Felizes',
-						imagem: '../../static/imagens/projeto-criancas-felizes/criancasfelizes1.jpg',
-						imagemMobile: '../../static/imagens/projeto-criancas-felizes/criancasfelizes1.jpg',
+						imagem: CriancasFelizes,
+						imagemMobile: CriancasFelizes,
 						sobre: [
 							'Fundada no dia 4 de Maio de 2013 pelo jovem Luciano Daniel que na época tinha 13 anos de idade. O projeto  conta com a participação de 15 voluntários para ajudar na arrecadação e na distribuição nos dias de evento. Nesses seus 4 anos de existência o projeto tem as redes sociais como uma de suas melhores ferramentas de trabalho para a arrecadação das doações, e já são mais de 20 ações que beneficiaram mais de 7 mil crianças, inclusive em 2015 o Projeto expandiu suas festas para o bairro de Santa Cruz, zona oeste do Rio.',
 							'O Projeto Crianças Felizes foi selecionado para participar do reality show de mobilização social "Click Esperança" da TV Globo, sendo ele finalista e vencedor do reality.',
@@ -208,8 +230,8 @@
 					},
 					{
 						nome: 'GatoMÍDIA',
-						imagem: '../../static/imagens/Gato Mídia/D - 23379978_1864848067161628_7307016498340374063_n.jpg',
-						imagemMobile: '../../static/imagens/Gato Mídia/D - 23379978_1864848067161628_7307016498340374063_n.jpg',
+						imagem: GatoMidia,
+						imagemMobile: GatoMidia,
 						sobre: [
 							'Espaço de aprendizado em mídia e tecnologia para jovens negros e moradores de espaços populares. Criado em 2014 no Complexo do Alemão estimula nesses jovens a produção da sua própria comunicação, rede e conexões.',
 							'Possibilitando diferentes narrativas, visibilidade, oportunidades e ideias criativas e coletivas que construam um mundo mais justo, igualitário e afetivo.'
@@ -225,8 +247,8 @@
 					},
 					{
 						nome: 'Instituto Movimento & Vida',
-						imagem: '../../static/imagens/instituto movimento e vida/movimentoevida1.jpg',
-						imagemMobile: '../../static/imagens/instituto movimento e vida/movimentoevida1.jpg',
+						imagem: MovimentoeVida,
+						imagemMobile: MovimentoeVida,
 						sobre: [
 							'O Instituto Movimento & Vida é uma organização sem fins lucrativos que realiza atendimento de fisioterapia gratuito aos moradores do conjunto de favelas do Complexo do Alemão.',
 							'A melhoria da qualidade de vida e reabilitação dos pacientes é o objetivo principal do trabalho desenvolvido pela instituição que atua 2007, promovendo informações de hábitos saudáveis e de proteção à saúde.',
@@ -243,8 +265,8 @@
 					},
 					{
 						nome: 'CRJ Alemão',
-						imagem: '../../static/imagens/crj/D - crj.jpg',
-						imagemMobile: '../../static/imagens/crj/D - crj.jpg',
+						imagem: CRJ,
+						imagemMobile: CRJ,
 						sobre: [
 							' O Centro de Referência para Juventude oferece cursos e atividades GRATUITAS.',
 							'Além disso, disponibiliza seus espaços para que projetos e pessoas que não tenha um local para estudar, ensaiar ou acessar a internet utilize-o totalmente em seu horário de funcionamento.',
@@ -260,9 +282,9 @@
 						endereço: 'Crj Alemão- Estrada do Itararé N: 690 Ref.: Atrás do Colégio Tim Lopes, na Antiga Faetec'
 					},
 					{
-						nome: 'Novo Líderes',
-						imagem: '../../static/imagens/Novos Líderes/novoslideres1.jpg',
-						imagemMobile: '../../static/imagens/Novos Líderes/novoslideres1.jpg',
+						nome: 'Novos Líderes',
+						imagem: NovosLideres,
+						imagemMobile: NovosLideres,
 						sobre: [
 							'Atuando há 3 anos, desde 2014, a ONG usa a educação empreendedora para desenvolver e empoderar jovens e adultos das comunidades cariocas em prol de modificar e melhorar suas comunidades de origem.'
 						],
@@ -276,9 +298,9 @@
 						endereço: 'Complexo do Alemão'
 					},
 					{
-						nome: 'Favela é FaShion',
-						imagem: '../../static/imagens/favela é fashion/fashion.jpg',
-						imagemMobile: '../../static/imagens/favela é fashion/fashion.jpg',
+						nome: 'Favela é Fashion',
+						imagem: FavelaFashion,
+						imagemMobile: FavelaFashion,
 						sobre: [
 							'Favela é fashion é um projeto criado para selecionar jovens de comunidades que não tem chances de pagar um curso de moda.',
 							'“ Ajudo esses jovens a encarar o sonho deles... Realizo meus sonhos conquistando os deles!!!”',
@@ -295,8 +317,8 @@
 					},
 					{
 						nome: 'Brigadeiros Literários',
-						imagem: '../../static/imagens/Brigadeiros Literários/Brigadeiros Literários.jpg',
-						imagemMobile: '../../static/imagens/Brigadeiros Literários/Brigadeiros Literários.jpg',
+						imagem: BrigadeiroLiterario,
+						imagemMobile: BrigadeiroLiterario,
 						sobre: [
 							'Os Brigadeiros Literários não é só um empreendimento, é um convite para uma experiência gustativa.',
 							'Um veículo de divulgação da palavra escrita, uma possibilidade de comunicação, de reflexão, de carinho, trocas que estão em sintonia com o jeito de ser de quem está envolvido neste projeto.'
@@ -312,8 +334,8 @@
 					},
 					{
 						nome: 'Clube de Luta do Complexo',
-						imagem: '../../static/imagens/Clube de lutas do complexo/clubedelutas4.jpg',
-						imagemMobile: '../../static/imagens/Clube de lutas do complexo/clubedelutas4.jpg',
+						imagem: ClubeLuta,
+						imagemMobile: ClubeLuta,
 						sobre: [
 							'O Clube de Luta atua há 15 anos e oferece atividades esportivas com ênfase nas artes marciais, além de reforço escolar e atividades de lazer e cultura para crianças, jovens e adultos.',
 							'Também se destacam no cenário de competições oficiais com dezenas de títulos estaduais e nacionais, inclusive em modalidades olímpicas como o Taekwondo.'
@@ -329,8 +351,8 @@
 					},
 					{
 						nome: 'Nave do Conhecimento Nova Brasília',
-						imagem: '../../static/imagens/Nave do Conhecimento/navedoconhecimento1.jpg',
-						imagemMobile: '../../static/imagens/Nave do Conhecimento/navedoconhecimento1.jpg',
+						imagem: NaveConhecimento,
+						imagemMobile: NaveConhecimento,
 						sobre: [
 							'Espaço público onde oferecemos cursos nas área de tecnologia, educação e internet grátis a toda população do conjunto de favelas do Complexo do Alemão.Aberto de Seg a Sábado de 09h às 19h.'
 						],
@@ -345,8 +367,8 @@
 					},
 					{
 						nome: 'Samba Favela',
-						imagem: '../../static/imagens/Samba Favela/sambadefavela2.jpg',
-						imagemMobile: '../../static/imagens/Samba Favela/sambadefavela2.jpg',
+						imagem: SambaFavela,
+						imagemMobile: SambaFavela,
 						sobre: [
 							'O Projeto Samba Favela teve início quando integrantes e amigos do antigo Grupo Brincadeira Tem Hora (BTH) se reencontraram pela internet e decidiram se reunir novamente para relembrar os velhos e bons tempos na música.',
 							'O (BTH)  foi fundado nos anos 90 e teve várias formações ao longo do tempo e hoje visa trazer para o Alemão a conexão entre o morro e o asfalto através do gênero musical e patrimônio cultural da cidade do Rio de Janeiro.',
@@ -363,8 +385,8 @@
 					},
 					{
 						nome: 'Casa das Primas Doceria',
-						imagem: '../../static/imagens/Casa das Primas Doceria/Logo Casa das Primas Doceria.png',
-						imagemMobile: '../../static/imagens/Casa das Primas Doceria/Logo Casa das Primas Doceria.png',
+						imagem: CasaPrimas,
+						imagemMobile: CasaPrimas,
 						sobre: [
 							'Loja de doces e salgados que tem como especialidades brownies, tortas, sorvetes e milk shake',
 							'"Aqui você pode se sentir o último brownie do pacote."'
