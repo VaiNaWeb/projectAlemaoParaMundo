@@ -192,24 +192,10 @@
 			<section class="homeDescricao-texto">
 				<h1 class="homeDescricao-titulo">COMO SURGIU O ALEMÃO PARA O MUNDO</h1>
 				<p class="homeDescricao-parag">
-						Lorem ipsum dolor sit amet, consectetur adipiscin
-					quam. Fusce velit mauris, posuere euismod sollicitudin eget, bibendum
-					eget felis. Nulla vitae orci tempus, varius libero vehicula.
-					Praesent convallis sem at quam congue, at accumsan diam tempus.
-					Aenean finibus mauris at lorem tristique, eget auctor nisi efficitur.
-					Vivamus eu dignissim justo, eu efficitur sem. Curabitur imperdiet
-					vehicula nisi, eu vestibulum justo pretium a. Pellentesque habitant
-					morbi tristique senectus et netus et malesuada fames ac turpis
-					egestas. Vestibulum sodales sodales ex id congue. Proin vestibulum
-					eros nec porttitor ullamcorper. Duis ut gravida nisl. Fusce elementum
-					semper est, eget porttitor orci tempor consequat.
+					O Alemão para o mundo é o resultado do projeto final dos estudantes do Vai Na Web, cujo os quais em sua maioria são residentes desse conjunto de favelas.
 				</p>
 				<p class="homeDescricao-parag">
-						Cras vel consequat erat, tempus sagittis lorem. Nam pellentesque in
-					sem ac consequat. Vestibulum vel leo a nisl rutrum accumsan tempor
-					at lorem. Integer lobortis tempus mi eget commodo. Nunc a erat varius,
-					dapibus neque nec, maximus sapien. Nullam pulvinar at elit imperdiet
-					auctor. Vestibulum vel dolor egestas, ultricies ligula at, blalorem.
+					Após três meses de aprendizado técnicos e praticos, eles mapaearam iniciativas sociais, culturais, empreendedoras, para mostrar a potencialidade, talentos, resistência existente no Complexo do Alemão.
 				</p>
 			</section>
 			<section class="homeDescricao-vnw">
@@ -385,6 +371,7 @@ export default{
 			this.segmento = ''
 			this.subSegmento = ''
 			this.ok = true
+			this.ocultarDescricao = true
 			this.reset()
 		},
 		setsubSegmento(value){
@@ -462,7 +449,7 @@ export default{
 	justify-content: space-between;
 }
 .cabecalhoContainerForm-entrada{
-	width: 90%;
+	width: 80%;
 	border-style: none;
 	border-radius:30px;
 	font-size: 1.30em;
@@ -511,7 +498,6 @@ export default{
 }
 .MenuItem-icon{
 	height: 22px;
-	/*margin-left: 10px;*/
 }
 .cabecalhoContainer-filtros{
 	width: 250px;
@@ -556,7 +542,6 @@ export default{
 	width: 100%;
 	min-height: 100vh;
 	padding-bottom: 180px;
-	/*padding-bottom: 10%;*/
 	display: none;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -702,7 +687,6 @@ export default{
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
-	/*align-content: space-around;*/
 	justify-content: flex-start;
 }
 .menuHamburgerDrop-Item{
@@ -726,29 +710,10 @@ export default{
 	background-color: #f26522;
 }
 .menuHamburgerDrop-Item p{
-	/*background-color: #0f0;*/
 	margin: 0; 
 }
-/*.cabecalhoMobileForm-menuHamburger:hover .menuHamburger-drop{
-	display: block;
-}
 
-.cabecalhoContainerFiltros-item{
-	min-width:47%;
-	max-width: 51%;
-	min-height: 10px; 
-	padding: 5px 10px;
-	border-radius: 20px;
-	font-family: ministry, sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 1.13em;
-	color: #2e3192;
-	text-align: left;
-	text-decoration: none;
-}*/
-
-/* menu */
+/* main */
 
 .homeDescricao{
 	width: 100%;
@@ -760,18 +725,13 @@ export default{
 	background-color: #f26522;
 
 }
-@media(max-width: 640px){
-	.conteudo{
-		/*min-width: 100%;*/
-	}
-}
 .homeDescricao-texto{
 	width: 32%;
 	min-width: 400px;
 	margin: 3%;
 }
 @media(max-width: 640px){
-	.conteudo-texto{
+	.homeDescricao-texto{
 		min-width: 90%;
 	}
 }
@@ -794,7 +754,7 @@ export default{
 	justify-content: flex-start;
 }
 @media(max-width: 640px){
-	.conteudo-vnw{
+	.homeDescricao-vnw{
 		min-width: 90%;
 	}
 }
@@ -810,11 +770,16 @@ export default{
 	color: #fff;
 	text-align: left;
 }
+@media(max-width: 640px){
+	.homeDescricao-parag{
+		width: 100%;
+		margin: 0 auto;
+	}
+}
 .homeDescricaoVnw-link{
 	width: 259px;
 	height: 55px;
 	margin-top: 10%;  
-	padding-top: 4px; 
 	border: solid 7px #fff;
 	border-radius: 40px;
 	text-decoration: none;
@@ -824,6 +789,9 @@ export default{
 	font-style: normal;
 	font-weight: 700;
 	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .rodape{
 	width: 20%;
@@ -835,8 +803,6 @@ export default{
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: flex-end;
-
-	/*background-color: red;*/
 }
 @media(max-width: 1250px){
 	.rodape{
@@ -890,6 +856,4 @@ export default{
 		margin: 10px auto;
 	}
 }
-
-
 </style>
