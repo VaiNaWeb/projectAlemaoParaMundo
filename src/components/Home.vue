@@ -87,8 +87,9 @@
 				<input class="cabecalhoContainerForm-entrada" 
 					type="text"
 					placeholder="O que você procura?"
-					v-model="nomeAtividade">
-				<img class="cabecalhoContainerForm-icon" src="../../static/assets/Lupa-busca.svg">
+					v-model="nomeAtividade"
+					@keyup.enter="ok=false">
+				<img class="cabecalhoContainerForm-icon" src="../../static/assets/Lupa-busca.svg" @click="ok=false">
 			</form>
 			<nav class="cabecalhoMobile-menu">
 				<button class="cabecalhoMobileMenu-btn" v-on:click="setSegmento('Alimentação')"> 
@@ -156,7 +157,7 @@
 		<main class="containerAtividade" v-else>
 			<h1 class="containerAtividade-titulo" v-show="alterar">
 				{{ segmento.toLowerCase() }}
-				<span class="containerAtividade-btnClose" @click="resetSegmento">X</span>
+				<span class="containerAtividade-btnClose" @click="resetSegmento()">X</span>
 			</h1>
 			<form class="cabecalhoMobile-form" @click="reset" v-show="alterar">
 				<input class="cabecalhoContainerForm-entrada" type="text" placeholder="O que você procura?" v-model="nomeAtividade">
@@ -217,7 +218,7 @@
 					técnico, o Vai na Web apresenta aulas de comunicação não violenta,
 					meditação, liderança, postura profissional e respeito à diversidade.
 				</p>
-				<a class="homeDescricaoVnw-link" href="#">fique por dentro</a>
+				<a class="homeDescricaoVnw-link" href="http://www.vainaweb.com.br/" target="_blank">fique por dentro</a>
 			</section>
 			<footer class="rodape">
 				<img class="rodape-logo1sti" src="../../static/assets/1sti_logo.svg">
@@ -390,6 +391,7 @@ export default{
 	}
 }	  
 </script>
+
 <style scoped>
 #appHome{
 	width: 100%;

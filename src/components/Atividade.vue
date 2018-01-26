@@ -1,4 +1,4 @@
-'<template >
+<template>
 	<div id="atividade">
 		<main class="atividade-container" v-for="atividade in atividadesSelecionadas">	
 			<section class="atividadeContainer-foto">
