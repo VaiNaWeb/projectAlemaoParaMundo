@@ -1,22 +1,25 @@
 <template>
 <div id="listaAtividades">
-	<main class="conteudo">
-		<section  class="conteudo-atividades">
-			<div v-for="atividade in atividadesFiltradas" @click="selecionarAtividade(atividade.nome)">
-				<div class="conteudoAtividades-item">
-					<img class="atividadesItem-foto" v-bind:src="atividade.imagem">
-					<div class="atividadesItem-mask">
-						<p class="atividadesItem-nome">{{ atividade.nome }}</p>
-						<p class="atividadesItem-seguimento">{{ atividade.subSegmento }}</p>
+	<VueScrollbar class="my-scrollbar" ref="Scrollbar">
+		<main class="conteudo">
+			<section  class="conteudo-atividades">
+				<div v-for="atividade in atividadesFiltradas" @click="selecionarAtividade(atividade.nome)">
+					<div class="conteudoAtividades-item">
+						<img class="atividadesItem-foto" v-bind:src="atividade.imagem">
+						<div class="atividadesItem-mask">
+							<p class="atividadesItem-nome">{{ atividade.nome }}</p>
+							<p class="atividadesItem-seguimento">{{ atividade.subSegmento }}</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-	</main>
+			</section>
+		</main>
+	</VueScrollbar>
 </div>
 </template>
 
 <script>
+// Import imagens
 import NoixQFaz from '../../static/imagens/Noix Q Faz/noixqfaz1.jpg'
 import ViDancar from '../../static/imagens/VIdançar/vidancar.jpg'
 import SlamLaje from '../../static/imagens/SlamLaje/slamlaje1.jpg'
@@ -35,6 +38,10 @@ import ClubeLuta from '../../static/imagens/Clube de lutas do complexo/clubedelu
 import NaveConhecimento from '../../static/imagens/Nave do Conhecimento/navedoconhecimento.jpg'
 import SambaFavela from '../../static/imagens/Samba Favela/sambadefavela2.jpg'
 import CasaPrima from '../../static/imagens/Casa das Primas Doceria/Logo Casa das Primas Doceria.png'
+// Fim imagens
+
+import VueScrollbar from 'vue2-scrollbar'
+require("vue2-scrollbar/dist/style/vue2-scrollbar.css")
 
 export default{
 	name:'ListaAtividades',
@@ -192,20 +199,55 @@ export default{
 			this.$emit('alterar')
 			this.$emit('selectAtividade', value)
 		}
-	}
+	},
+	components:{ 
+    	VueScrollbar
+    }
 }
 </script>
 
 <style scoped>
 #listaAtividades{
 	max-width: 40%;
-	min-height: 100vh;
+	height: 100vh;
 	margin-right: auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: flex-start;	
 }
+/*The Wrapper*/
+.my-scrollbar{
+	width: 100%;
+	min-width: 300px;
+	max-height: 100vh;
+}
+@media (max-width: 640px){
+	.my-scrollbar{
+		height: 85vh;
+	}
+}
+@media (max-width: 400px){
+	.my-scrollbar{
+		height: 83vh;
+	}
+}
+/* barra toda */
+/*#listaAtividades::-webkit-scrollbar{ 
+	width:7px;
+}*/
+/* parte de dentro */
+/*#listaAtividades::-webkit-scrollbar-track-piece{ 
+	background-color:#F26522;
+	border:1px solid #fcae1b;
+	border-radius:20px;
+}*/
+/* barra rolagem */
+/*#listaAtividades::-webkit-scrollbar-thumb{ 
+	background-color:#2e3192;
+	border-radius:20px;
+}*/
+
 @media (max-width: 640px){
 	#listaAtividades{
 		max-width: 95%;
@@ -215,12 +257,14 @@ export default{
 .conteudo{
 	width:100%;
     min-height: 100vh;
+    margin-right: 5px;
     display: flex;
     align-items: flex-start;
 }
 .conteudo-atividades{
 	width: 100%;
 	margin-top: 20px;
+	margin-right: 10px;
 }
 .conteudoAtividades-item{
 	width: 100%;

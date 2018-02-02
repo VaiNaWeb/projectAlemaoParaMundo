@@ -27,7 +27,7 @@
 						<div class="infoSobreConteudo-div">
 							<p class="atividadesobre-texto" v-for="value in atividade.sobre">{{ value }}</p>
 						</div>
-						<div class="infoSobreConteudo-div sobreConteudo-divIcon">
+						<div class="sobreConteudo-divIcon">
 							<img class="infoSobreConteudoDiv-icon" src="../../static/assets/email.svg" v-show="atividade.email">
 							<p class="infoSobreConteudoDiv-text" v-show="atividade.email">
 								{{ atividade.email }}
@@ -435,20 +435,6 @@ import CasaPrimas from '../../static/imagens/Casa das Primas Doceria/Logo Casa d
 
 		},
 		methods:{
-			// alterarAba(){
-			// 	if(this.zIndexSobre === 2){
-			// 		this.zIndexSobre = 1
-			// 		this.zIndexLocal = 2
-			// 		this.bgColorSobre = '#f46424'
-			// 		this.bgColorLocal = '#fff'
-			// 	} else {
-			// 		this.zIndexSobre = 2
-			// 		this.zIndexLocal = 1
-			// 		this.bgColorSobre = '#fff'
-			// 		this.bgColorLocal = '#f46424'
-			// 	}
-
-			// },
 			selecionarAbaSobre(){
 				this.mostarAbaSobre = true
 				this.bgColorSobre = '#fff'
@@ -470,9 +456,11 @@ import CasaPrimas from '../../static/imagens/Casa das Primas Doceria/Logo Casa d
 
 <style scoped>
 #atividade{
-	width: 40%;
+	width: 50%;
 	min-height: 100vh;
 	margin-right: auto;
+	background: url(../../static/assets/background.svg) center bottom no-repeat;
+	background-size: 100%;
 	position: relative;
 	top:0;
 	display: flex;
@@ -608,21 +596,18 @@ import CasaPrimas from '../../static/imagens/Casa das Primas Doceria/Logo Casa d
 	border-radius: 0px 20px 20px 20px;
 	display: flex;
 	flex-flow: row wrap;
-	/*justify-content: center;*/
-}
-@media(max-width: 640px){
-	.cabecalhoContainer-filtros{
-
-	}
 }
 .infoSobreConteudo-div{
-	min-width: 200px;
-	max-width: 50%;
+	min-width: 240px;
+	width: 40%;
 }
-@media(max-width: 1140px){
+@media(max-width: 1290px){
 	.infoSobreConteudo-div{
 		max-width: 100%;
-	}	
+	}
+	.sobreConteudo-divIcon{
+		max-width: 50%;
+	}
 }
 .atividadesobre-texto{
 	font-family: ministry, sans-serif;
@@ -635,6 +620,8 @@ import CasaPrimas from '../../static/imagens/Casa das Primas Doceria/Logo Casa d
 	margin-top: 8px;
 }
 .sobreConteudo-divIcon{
+	min-width: 300px;
+	max-width: 60%;
 	padding-left: 10px;
 	display: flex;
 	flex-flow: row wrap;
@@ -643,21 +630,22 @@ import CasaPrimas from '../../static/imagens/Casa das Primas Doceria/Logo Casa d
 	align-content: flex-start;
 }
 .infoSobreConteudoDiv-icon{
-	width: 30px;
+	width: 25px;
 	margin: 15px 0;
 }
 .infoSobreConteudoDiv-text{
-	width: 95%;
+	width: 85%;
 	margin-left: 8px;
 	margin-right: auto;
 	font-family: ministry, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 13px;
+	font-size: 14px;
+	color: #2e3192;
 }
-@media (max-width: 1140px){
+@media (max-width: 1350px){
 	.infoSobreConteudoDiv-text{
-		width: 80%;
+		width: 85%;
 	}
 }
 .atividadeContainer-local{

@@ -15,43 +15,63 @@
 				<nav class="cabecalhoContainer-menu">
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Alimentação')">
 						alimentação
-						<img class="MenuItem-icon" src="../../static/assets/alimentacao.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/alimentacao.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Arte e Cultura')">
 						arte e cultura
-						<img class="MenuItem-icon" src="../../static/assets/arteEcultura.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/arteEcultura.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Beleza e Estética')">
 						beleza e estética
-						<img class="MenuItem-icon" src="../../static/assets/belezaEestetica.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/belezaEestetica.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Coletivo')">
 						coletivos
-						<img class="MenuItem-icon" src="../../static/assets/coletivos.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/coletivos.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Educação')">
 						educação
-						<img class="MenuItem-icon" src="../../static/assets/educacao.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/educacao.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Esporte e Atividade Física')">
-						esportes e atividades físicas
-						<img class="MenuItem-icon" src="../../static/assets/esportes.svg">
+						esportes e atividades
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/esportes.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('ONG')">
 						ong's
-						<img class="MenuItem-icon" src="../../static/assets/ongs.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/ongs.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Saúde')">
 						saúde
-						<img class="MenuItem-icon" src="../../static/assets/saude.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/saude.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Serviço')">
 						serviços
-						<img class="MenuItem-icon" src="../../static/assets/servicos.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/servicos.svg">
+						</div>
 					</button>
 					<button class="cabecalhoContainerMenu-item" v-on:click="setSegmento('Transporte')">
 						transportes
-						<img class="MenuItem-icon" src="../../static/assets/transporte.svg">
+						<div class="containerMenuItem-icon">
+							<img class="menuItem-icon" src="../../static/assets/transporte.svg">
+						</div>
 					</button>
 				</nav>
 			</aside>
@@ -76,7 +96,7 @@
 				<p 
 					class="cabecalhoContainerFiltros-item"
 					v-for="subSegmento in subSegmentosFiltrados"
-					@click="setsubSegmento(subSegmento )"
+					@click="setsubSegmento(subSegmento)"
 				>{{ subSegmento }}</p>
 			</section>
 		</header>
@@ -189,9 +209,9 @@
 				v-else
 			></Atividade>
 		</main>
-		<main class="homeDescricao" v-show="ocultarDescricao">
+		<main class="homeDescricao" v-if="ocultarDescricao">
 			<section class="homeDescricao-texto">
-				<h1 class="homeDescricao-titulo">COMO SURGIU O ALEMÃO PARA O MUNDO</h1>
+				<h1 class="homeDescricao-titulo">COMO SURGIU O<br>ALEMÃO PARA<br>O MUNDO</h1>
 				<p class="homeDescricao-parag">
 					O Alemão para o mundo é o resultado do projeto final dos estudantes do Vai Na Web, cujo os quais em sua maioria são residentes desse conjunto de favelas.
 				</p>
@@ -220,12 +240,29 @@
 				</p>
 				<a class="homeDescricaoVnw-link" href="http://www.vainaweb.com.br/" target="_blank">fique por dentro</a>
 			</section>
-			<footer class="rodape">
-				<img class="rodape-logo1sti" src="../../static/assets/1sti_logo.svg">
-				<img class="rodape-logoEducap" src="../../static/assets/educap_logo.svg">
-				<img class="rodape-logoPrecisa" src="../../static/assets/precisa-ser_logo.svg">
+			<footer class="homeDescricao-rodape">
+				<a class="rodape-linkIcon" href="http://www.1sti.com.br/" target="_blank">
+					<img class="rodape-logo1sti" src="../../static/assets/1sti_logo.svg">
+				</a>
+				<a class="rodape-linkIcon" href="https://www.facebook.com/educap.org/" target="_blank">
+					<img class="rodape-logoEducap" src="../../static/assets/educap_logo.svg">
+				</a>
+				<a class="rodape-linkIcon" href="https://www.facebook.com/precisaser/" target="_blank">
+					<img class="rodape-logoPrecisa" src="../../static/assets/precisa-ser_logo.svg">
+				</a>
 			</footer>
 		</main>
+		<footer class="rodape" v-else>
+				<a class="rodape-linkIcon" href="http://www.1sti.com.br/" target="_blank">
+					<img class="rodape-logo1sti" src="../../static/assets/1sti_logo.svg">
+				</a>
+				<a class="rodape-linkIcon" href="https://www.facebook.com/educap.org/" target="_blank">
+					<img class="rodape-logoEducap" src="../../static/assets/educap_logo.svg">
+				</a>
+				<a class="rodape-linkIcon" href="https://www.facebook.com/precisaser/" target="_blank">
+					<img class="rodape-logoPrecisa" src="../../static/assets/precisa-ser_logo.svg">
+				</a>
+			</footer>
 	</div>
 </template>
 <script>
@@ -361,6 +398,7 @@ export default{
 	methods:{
 		setSegmento(value){
 			this.segmento = value
+			this.subSegmento = ''
 			this.ok = false
 			this.ocultarDescricao = false
 			this.reset()
@@ -377,6 +415,10 @@ export default{
 		},
 		setsubSegmento(value){
 			this.subSegmento = value
+			
+			if(this.alterar === false){
+				this.alterar = true
+			}
 		},
 		selecionarAtividades(){
 			this.alterar = !this.alterar
@@ -479,6 +521,7 @@ export default{
 	width: 100%;
 	height: 60px;
 	padding: 1% 24px;
+	padding-right: 10px;
 	border: solid 7px #fcae1b;
 	border-radius: 30px;
 	font-size: 1.10em;
@@ -498,8 +541,15 @@ export default{
 	background-color: #2e3192;
 	outline: none;
 }
-.MenuItem-icon{
+.containerMenuItem-icon{
+	width: 39px;
+	display: flex;
+	justify-content: center;
+}
+.menuItem-icon{
 	height: 22px;
+	/*margin-right: 10px;*/
+	
 }
 .cabecalhoContainer-filtros{
 	width: 250px;
@@ -536,7 +586,7 @@ export default{
 }
 .cabecalhoContainerFiltros-item:hover{
  	color: #fff;
-	background-color: #f26522;
+	background-color: #f26122;
 }
 .cabecalhoMobile{
 	background: url(../../static/assets/background.svg) center bottom no-repeat;
@@ -719,7 +769,7 @@ export default{
 
 .homeDescricao{
 	width: 100%;
-	min-height: 100vh;
+	min-height: 70vh;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -782,7 +832,7 @@ export default{
 	width: 259px;
 	height: 55px;
 	margin-top: 10%;  
-	border: solid 7px #fff;
+	border: solid 5px #fff;
 	border-radius: 40px;
 	text-decoration: none;
 	text-align: center;
@@ -795,67 +845,78 @@ export default{
 	justify-content: center;
 	align-items: center;
 }
-.rodape{
+.rodape,
+.homeDescricao-rodape{
 	width: 20%;
 	min-width: 200px;
-	min-height: 100vh;
+	min-height: 70vh;
 	padding: 2%;
 	background-color: #f26522;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
+}
+.rodape{
+	width: 100%;
+	min-height: 20vh;
+	flex-wrap: nowrap;	
 }
 @media(max-width: 1250px){
-	.rodape{
+	.homeDescricao-rodape{
 		width: auto;
 		min-width: auto;
-		max-width: 50%;
+		max-width: 100%;
 		min-height: 30vh;
 		justify-content: center;
 		align-items: center;
 		align-content: flex-start;
 	}
 }
-@media(max-width: 640px){
+/*@media(max-width: 640px){
 	.rodape{
 		max-width: 90%;
+	}
+}*/
+.rodape-linkIcon{
+	margin: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.rodape .rodape-linkIcon{
+	margin:0;
+}
+@media(max-width: 1250px){
+	.rodape-linkIcon{
+		margin: 10px auto;
 	}
 }
 .rodape-logo1sti{
 	width: 40%;
-	min-width: 100px;
-	margin: 20%;
+	min-width: 70px;
 }
 @media(max-width: 1250px){
 	.rodape-logo1sti{
-		width: 20%;
 		min-width: auto;
-		margin: 10px auto;
 	}
 }
 .rodape-logoEducap{
 	width: 70%;
 	min-width: 150px;
-	margin: 20%;
 }
 @media(max-width: 1250px){
 	.rodape-logoEducap{
-		width: 35%;
 		min-width: auto;
-		margin: 10px auto;
 	}
 }
 .rodape-logoPrecisa{
 	width: 70%;
 	min-width: 150px;
-	margin: 20%;
 }
 @media(max-width: 1250px){
 	.rodape-logoPrecisa{
-		width: 35%;
 		min-width: auto;
-		margin: 10px auto;
 	}
 }
 </style>
