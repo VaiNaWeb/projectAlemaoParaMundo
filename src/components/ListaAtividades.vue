@@ -232,22 +232,6 @@ export default{
 		height: 83vh;
 	}
 }
-/* barra toda */
-/*#listaAtividades::-webkit-scrollbar{ 
-	width:7px;
-}*/
-/* parte de dentro */
-/*#listaAtividades::-webkit-scrollbar-track-piece{ 
-	background-color:#F26522;
-	border:1px solid #fcae1b;
-	border-radius:20px;
-}*/
-/* barra rolagem */
-/*#listaAtividades::-webkit-scrollbar-thumb{ 
-	background-color:#2e3192;
-	border-radius:20px;
-}*/
-
 @media (max-width: 640px){
 	#listaAtividades{
 		max-width: 95%;
@@ -265,6 +249,11 @@ export default{
 	width: 100%;
 	margin-top: 20px;
 	margin-right: 10px;
+}
+@media (max-width: 400px){
+	.conteudo-atividades{
+		margin-top: 0;
+	}
 }
 .conteudoAtividades-item{
 	width: 100%;

@@ -672,6 +672,8 @@ export default{
 .containerAtividade{
 	width: 100%;
 	min-height: 100vh;
+	background: url(../../static/assets/background.svg) center bottom no-repeat;
+	background-size: auto;
 	display: none;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
@@ -718,6 +720,7 @@ export default{
 	width: 85%;
 	min-height: 45px;
 	padding: 2% 5%;
+	margin-bottom: 15px;
 	border-radius: 30px;
 	background: #fff;
 	position: relative;
