@@ -93,8 +93,7 @@
 				class="cabecalhoContainer-filtros"
 				v-show='subSegmentosFiltrados'
 			>
-				<p 
-					class="cabecalhoContainerFiltros-item"
+				<p class="cabecalhoContainerFiltros-item"
 					v-for="subSegmento in subSegmentosFiltrados"
 					@click="setsubSegmento(subSegmento)"
 				>{{ subSegmento }}</p>
