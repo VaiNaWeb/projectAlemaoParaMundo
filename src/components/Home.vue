@@ -287,7 +287,20 @@ export default{
 							'Restaurante', 
 							'Lanches', 
 							'Doceria',
-							'Bolos Festa'
+							'Festas'
+						]
+					},
+					{
+						nome: 'Arte e Cultura',
+						subSegmentos: [ 
+							'Graffiti', 
+							'Musica',
+							'Dança',
+							'Poesia',
+							'Teatro',
+							'Fotografia',
+							'Educação',
+							'Eventos'
 						]
 					},
 					{
@@ -295,20 +308,7 @@ export default{
 						subSegmentos: [
 							'Cabelo',
 							'Maquiagem',
-							'Estética'				
-						]
-					},
-					{
-						nome: 'Arte e Cultura',
-						subSegmentos: [
-							'Cinema', 
-							'Graffiti', 
-							'Musica',
-							'Dança',
-							'Poesia',
-							'Teatro',
-							'Fotografia',
-							'Educação'
+							'Corpo'				
 						]
 					},
 					{
@@ -316,14 +316,12 @@ export default{
 						subSegmentos: [
 							'Coworking',
 							'Design',
-							'Gráfica',
 							'Fotografia',
 							'Assistência Social',
 							'Produção',
 							'Cultura',
-							'Moradia',
 							'Moda',
-							'Meio Ambiente'
+							'Poesia'
 						]
 					},
 					{

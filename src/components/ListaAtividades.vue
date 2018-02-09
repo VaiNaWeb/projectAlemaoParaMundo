@@ -1,5 +1,6 @@
 <template>
 <div id="listaAtividades">
+<!-- <link rel="stylesheet" href="../../static/css/VueScrollbar.css"> -->
 	<VueScrollbar class="my-scrollbar" ref="Scrollbar">
 		<main class="conteudo">
 			<section  class="conteudo-atividades">
@@ -20,24 +21,47 @@
 
 <script>
 // Import imagens
-import NoixQFaz from '../../static/imagens/Noix Q Faz/noixqfaz1.jpg'
-import ViDancar from '../../static/imagens/VIdançar/vidancar.jpg'
-import SlamLaje from '../../static/imagens/SlamLaje/slamlaje1.jpg'
-import CasaBrota from '../../static/imagens/CasaBrota/Casa Brota Coworking de Favela.jpg'
-import ClasseD from '../../static/imagens/Classe D/D - classed1.jpg'
-import AfroLaje from '../../static/imagens/Afro Laje/D - afrolaje1.jpg'
-import CriancasFelizes from '../../static/imagens/projeto-criancas-felizes/Logo Projeto Crianças Felizes.jpg'
-import RaizesMovimento from '../../static/imagens/Raízes em Movimentos/raizesemmovimento2.jpg'
-import GatoMidia from '../../static/imagens/Gato Mídia/12768127_1556038881375883_2486605588657018434_o.jpg'
-import MovimentoVida from '../../static/imagens/instituto movimento e vida/movimentoevida3jpg.jpg'
-import CRJ from '../../static/imagens/crj/crj1.jpg'
-import NovosLideres from '../../static/imagens/Novos Líderes/novoslideres.jpg'
-import FavelaFashion from '../../static/imagens/favela é fashion/fashion2.jpg'
-import BrigadeiroLiterario from '../../static/imagens/Brigadeiros Literários/Brigadeiros Literários.jpg'
-import ClubeLuta from '../../static/imagens/Clube de lutas do complexo/clubedelutas3.jpg'
-import NaveConhecimento from '../../static/imagens/Nave do Conhecimento/navedoconhecimento.jpg'
-import SambaFavela from '../../static/imagens/Samba Favela/sambadefavela2.jpg'
-import CasaPrima from '../../static/imagens/Casa das Primas Doceria/Logo Casa das Primas Doceria.png'
+import AbracoCampeao_Logo from '../../static/imagens/AbracoCampeao-Logo.jpg'
+import AfroLaje from '../../static/imagens/AfroLaje-D.jpg'
+import AlexandreFotografia_Logo from '../../static/imagens/AlexandreFotografia-Logo.jpg'
+import BrigadeirosLiterarios from '../../static/imagens/BrigadeirosLiterarios.jpg'
+import CRJ_Logo from '../../static/imagens/CRJ-Logo.jpg'
+import CarolMuniz from '../../static/imagens/CarolMuniz-D.jpg'
+import CasaBrota_Logo from '../../static/imagens/CasaBrota-Logo.jpg'
+import CasaPrimas_Logo from '../../static/imagens/CasaPrimas-Logo.png'
+import ClasseD_Logo from '../../static/imagens/ClasseD-Logo.jpg'
+import ClubeLuta_Logo from '../../static/imagens/ClubeLuta-Logo.jpg'
+import ContraBandoTeatro_Logo from '../../static/imagens/ContraBandoTeatro-Logo.jpg'
+import DancaCiaArt_Logo from '../../static/imagens/DancaCiaArt-Logo.jpg'
+import DeboraAmorim_Logo from '../../static/imagens/DeboraAmorim-Logo.jpg'
+import DocesMomentos_Logo from '../../static/imagens/DocesMomentos-Logo.jpg'
+import EDUCAP from '../../static/imagens/EDUCAP-D.jpg'
+import ErikaMartin from '../../static/imagens/ErikaMartin.jpg'
+import EstudioAbaete_Logo from '../../static/imagens/EstudioAbaete-Logo.jpg'
+import FamiliaPerninha from '../../static/imagens/FamiliaPerninha-D.jpg'
+import FavelaFashion_Logo from '../../static/imagens/FavelaFashion-Logo.jpg'
+import FavelaGrafia_Logo from '../../static/imagens/FavelaGrafia-Logo.png'
+import FotoClubeAlemao_Logo from '../../static/imagens/FotoClubeAlemao-Logo.jpg'
+import FuturoMovimento from '../../static/imagens/FuturoMovimento.jpg'
+import GAS_Logo from '../../static/imagens/GAS-Logo.jpg'
+import GatoMidia_Logo from '../../static/imagens/GatoMidia-Logo.png'
+import JogaCria_Logo from '../../static/imagens/JogaCria-Logo.png'
+import MarcosCarolinno_Logo from '../../static/imagens/MarcosCarolinno-Logo.png'
+import MovimentoVida from '../../static/imagens/MovimentoVida-D.jpg'
+import NaveConhecimento_Logo from '../../static/imagens/NaveConhecimento-Logo.png'
+import NoixQFaz from '../../static/imagens/NoixQFaz.jpg'
+import NovosLideres_Logo from '../../static/imagens/NovosLideres-Logo.jpg'
+import OcaCurumins_Logo from '../../static/imagens/OcaCurumins-Logo.jpg'
+import PoetasFavelados_Logo from '../../static/imagens/PoetasFavelados-Logo.jpg'
+import ProjetoCriancasFelizes_Logo from '../../static/imagens/ProjetoCriancasFelizes-Logo.jpg'
+import RaizesMovimento_Logo from '../../static/imagens/RaizesMovimento-Logo.png'
+import RecreacaoInfantilEstrelinha from '../../static/imagens/RecreacaoInfantilEstrelinha-D.jpg'
+import SambaFavela_Logo from '../../static/imagens/SambaFavela-Logo.jpg'
+import SlamLaje_Logo from '../../static/imagens/SlamLaje-Logo.jpg'
+import TiaguinhoSilva from '../../static/imagens/TiaguinhoSilva.jpg'
+import TocaLobo_Logo from '../../static/imagens/TocaLobo-Logo.jpg'
+import VaiNaWeb_Logo from '../../static/imagens/VaiNaWeb-Logo.jpg'
+import ViDancar from '../../static/imagens/ViDancar-D.jpg'
 // Fim imagens
 
 import VueScrollbar from 'vue2-scrollbar'
@@ -58,119 +82,251 @@ export default{
 		return{
 			atividades:[
 				{
-					imagem: NoixQFaz,
-					nome: 'Noix Q Faz',
-					segmento: 'Arte e Cultura',
-					subSegmento: 'Graffiti'
-				},
-				{
-					imagem: ViDancar,
-					nome: 'Vidançar',
-					segmento: 'Arte e Cultura',
-					subSegmento: 'Dança'
-				},
-				{
-					imagem: SlamLaje,
-					nome: 'Slam Laje',
-					segmento: 'Coletivo',
-					subSegmento: 'Cultura'
-				},
-				{
-					imagem: CasaBrota,
-					nome: 'Casa Brota',
-					segmento: 'Coletivo',
-					subSegmento: 'Coworking'
-				},
-				{
-					imagem: ClasseD,
-					nome: 'Classe D – Ateliê de Ideias',
-					segmento: 'Arte e Cultura',
-					subSegmento: 'Graffiti'
-				},
-				{
-					imagem: AfroLaje,
-					nome: 'Afro Laje',
-					segmento: 'Coletivo',
-					subSegmento: 'Cultura'
-				},
-				{
-					imagem: CriancasFelizes,
-					nome: 'Crianças Felizes',
-					segmento: 'Coletivo',
-					subSegmento: 'Assistência Social'
-				},
-				{
-					imagem: RaizesMovimento,
-					nome: 'Instituto Raízes Em Movimento',
-					segmento: 'ONG',
-					subSegmento: 'Cidania e Desenvolvimento'
-				},
-				{
-					imagem: GatoMidia,
-					nome: 'GatoMÍDIA',
-					segmento: 'Educação',
-					subSegmento: 'Comunicação'
-				},
-				{
-					imagem: MovimentoVida,
-					nome: 'Instituto Movimento & Vida',
-					segmento: 'Esporte e Atividade Física',
-					subSegmento: 'Fisioterapia'
-				},
-				{
-					imagem: CRJ,
-					nome: 'CRJ Alemão',
-					segmento: 'Arte e Cultura',
-					subSegmento: 'Educação'
-				},
-				{
-					imagem: NovosLideres,
-					nome: 'Novos Líderes',
-					segmento: 'ONG',
-					subSegmento: 'Cidania e Desenvolvimento'
-				},
-				{
-					imagem: FavelaFashion,
-					nome: 'Favela é Fashion',
-					segmento: 'Coletivo',
-					subSegmento: 'Moda'
-				},
-				{
-					imagem: BrigadeiroLiterario,
+					imagem: BrigadeirosLiterarios,
 					nome: 'Brigadeiros Literários',
 					segmento: 'Alimentação',
 					subSegmento: 'Doceria'
 				},
 				{
-					imagem: ClubeLuta,
-					nome: 'Clube de Luta do Complexo',
-					segmento: 'Esporte e Atividade Física',
-					subSegmento: 'Arte Marcial'
-				},
-				{
-					imagem: NaveConhecimento,
-					nome: 'Nave do Conhecimento Nova Brasília',
-					segmento: 'Educação',
-					subSegmento: 'Tecnologia'
-				},
-				{
-					imagem: SambaFavela,
-					nome: 'Samba Favela',
-					segmento: 'Arte e Cultura',
-					subSegmento: 'Musica'
-				},
-				{
-					imagem: CasaPrima,
+					imagem: CasaPrimas_Logo,
 					nome: 'Casa das Primas Doceria',
 					segmento: 'Alimentação',
 					subSegmento: 'Doceria'
 				},
-				// {
-				// 	imagem: '',
-				// 	nome: '',
-				// 	segmento: '',
-				// 	subSegmento: ''
-				// },
+				{
+					imagem: DocesMomentos_Logo,
+					nome: 'Doces e Momentos',
+					segmento: 'Alimentação',
+					subSegmento: 'Festas'
+				},
+				{
+					imagem: AfroLaje,
+					nome: 'Afro Laje',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Dança'
+				},
+				{
+					imagem: NoixQFaz,
+					nome: 'Coletivo de Grafite NoixQFaz',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Graffiti'
+				},
+				{
+					imagem: ContraBandoTeatro_Logo,
+					nome: 'Contra Bando de Teatro',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Teatro'
+				},
+				{
+					imagem: CRJ_Logo,
+					nome: 'CRJ - Alemão',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Educação'
+				},
+				{
+					imagem: FuturoMovimento,
+					nome: 'Futuro em Movimento',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Dança'
+				},
+				{
+					imagem: ProjetoCriancasFelizes_Logo,
+					nome: 'Projeto Crianças Felizes',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Eventos'
+				},
+				{
+					imagem: SambaFavela_Logo,
+					nome: 'Projeto Samba Favela',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Eventos'
+				},
+				{
+					imagem: ViDancar,
+					nome: 'Projeto Vidançar',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Dança'
+				},
+				{
+					imagem: SlamLaje_Logo,
+					nome: 'Slam Laje',
+					segmento: 'Arte e Cultura',
+					subSegmento: 'Eventos'
+				},
+				{
+					imagem: DeboraAmorim_Logo,
+					nome: 'Debora Amorim - Makeup',
+					segmento: 'Beleza e Estética',
+					subSegmento: 'Maquiagem'
+				},
+				{
+					imagem: FavelaFashion_Logo,
+					nome: 'Favela é Fashion',
+					segmento: 'Coletivo',
+					subSegmento: 'Moda'
+				},
+				{
+					imagem: FavelaGrafia_Logo,
+					nome: 'Favelagrafia',
+					segmento: 'Coletivo',
+					subSegmento: 'Fotografia'
+				},
+				{
+					imagem: FotoClubeAlemao_Logo,
+					nome: 'Foto Clube Alemão',
+					segmento: 'Coletivo',
+					subSegmento: 'Fotografia'
+				},
+				{
+					imagem: GAS_Logo,
+					nome: 'GAS - Grupo Alemão Solidário',
+					segmento: 'Coletivo',
+					subSegmento: 'Assistência Social'
+				},
+				{
+					imagem: PoetasFavelados_Logo,
+					nome: 'Poetas Favelados',
+					segmento: 'Coletivo',
+					subSegmento: 'Poesia'
+				},
+				{
+					imagem: GatoMidia_Logo,
+					nome: 'Gato Mídia',
+					segmento: 'Educação',
+					subSegmento: 'Comunicação'
+				},
+				{
+					imagem: JogaCria_Logo,
+					nome: 'Joga Cria',
+					segmento: 'Educação',
+					subSegmento: 'Tecnologia'
+				},
+				{
+					imagem: NaveConhecimento_Logo,
+					nome: 'Nave do Conhecimento de Nova Brasília',
+					segmento: 'Educação',
+					subSegmento: 'Tecnologia'
+				},
+				{
+					imagem: RecreacaoInfantilEstrelinha,
+					nome: 'Recreação Infantil Estrelinha',
+					segmento: 'Educação',
+					subSegmento: 'Infantil'
+				},
+				{
+					imagem: VaiNaWeb_Logo,
+					nome: 'Vai na web',
+					segmento: 'Educação',
+					subSegmento: 'Tecnologia'
+				},
+				{
+					imagem: ClubeLuta_Logo,
+					nome: 'Clube de Luta do Complexo',
+					segmento: 'Esporte e Atividade Física',
+					subSegmento: 'Artes Marciais'
+				},
+				{
+					imagem: FamiliaPerninha,
+					nome: 'Família Perninha Kickboxing',
+					segmento: 'Esporte e Atividade Física',
+					subSegmento: 'Artes Marciais'
+				},
+				{
+					imagem: AbracoCampeao_Logo,
+					nome: 'Associação Abraço Campeão',
+					segmento: 'ONG',
+					subSegmento: 'Cidania e Desenvolvimento'
+				},
+				{
+					imagem: OcaCurumins_Logo,
+					nome: 'Centro Cultural Oca dos Curumins',
+					segmento: 'ONG',
+					subSegmento: 'Educação e Cultura'
+				},
+				{
+					imagem: EDUCAP,
+					nome: 'EDUCAP - Espaço Democrático de União, Convivência e Aprendizagem',
+					segmento: 'ONG',
+					subSegmento: 'Cidania e Desenvolvimento'
+				},
+				{
+					imagem: RaizesMovimento_Logo,
+					nome: 'Instituto Raízes Em Movimento',
+					segmento: 'ONG',
+					subSegmento: 'Educação e Cultura'
+				},
+				{
+					imagem: NovosLideres_Logo,
+					nome: 'Novos Líderes Empreendedores',
+					segmento: 'ONG',
+					subSegmento: 'Educação e Cultura'
+				},
+				{
+					imagem: MovimentoVida,
+					nome: 'Instituto Movimento & Vida',
+					segmento: 'Saúde',
+					subSegmento: 'Fisioterapia'
+				},
+				{
+					imagem: AlexandreFotografia_Logo,
+					nome: 'Alexandre Silva Fotografia',
+					segmento: 'Fotografia',
+					subSegmento: 'Serviço'
+				},
+				{
+					imagem: CasaBrota_Logo,
+					nome: 'Casa Brota - Coworking de favela',
+					segmento: 'Serviço',
+					subSegmento: 'Coworking'
+				},
+				{
+					imagem: ClasseD_Logo,
+					nome: 'Classe D - Ateliê de Ideias',
+					segmento: 'Serviço',
+					subSegmento: 'Design'
+				},
+				{
+					imagem: DancaCiaArt_Logo,
+					nome: 'Dança e Cia Art',
+					segmento: 'Serviço',
+					subSegmento: 'Dança'
+				},
+				{
+					imagem: ErikaMartin,
+					nome: 'Erika Martin Fotografia',
+					segmento: 'Serviço',
+					subSegmento: 'Fotografia'
+				},				
+				{
+					imagem: EstudioAbaete_Logo,
+					nome: 'Estúdio Abaeté',
+					segmento: 'Serviço',
+					subSegmento: 'Produção'
+				},
+				{
+					imagem: CarolMuniz,
+					nome: 'Agência Carol Muniz',
+					segmento: 'Serviço',
+					subSegmento: 'Gráfica'
+				},
+				{
+					imagem: MarcosCarolinno_Logo,
+					nome: 'Marcos Carolino Art',
+					segmento: 'Serviço',
+					subSegmento: 'Dança'
+				},
+				{
+					imagem: TocaLobo_Logo,
+					nome: 'Toca do Lobo Produções',
+					segmento: 'Serviço',
+					subSegmento: 'Produção'
+				},
+				{
+					imagem: TiaguinhoSilva,
+					nome: 'Tiaguinho Silva',
+					segmento: 'Transporte',
+					subSegmento: 'Moto Táxi'
+				}
 			]
 		}
 	},
@@ -207,8 +363,12 @@ export default{
 </script>
 
 <style scoped>
+/*@import '../../static/css/VueScrollbar.css';*/
+
 #listaAtividades{
-	max-width: 40%;
+	width: 40%;
+	max-width: 600px;
+
 	height: 100vh;
 	margin-right: auto;
 	display: flex;
@@ -273,6 +433,7 @@ export default{
 .atividadesItem-mask{
 	width: 100%;
 	height: 300px;
+	padding-right: 20px;
 	position: absolute;
 	top: 0;
 	z-index: 9;
