@@ -293,7 +293,7 @@ export default{
 				},
 				{
 					imagem: ErikaMartin,
-					nome: 'Erika Martin Fotografia',
+					nome: 'Erica Martin Fotografia',
 					segmento: 'Serviço',
 					subSegmento: 'Fotografia'
 				},				

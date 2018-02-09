@@ -74,7 +74,7 @@
 // As imagens precisa ser revisada. Não são estas!
 // Import imagens
 import AbracoCampeao_Logo from '../../static/imagens/AbracoCampeao-Logo.jpg'
-import AfroLaje from '../../static/imagens/AfroLaje-D.jpg'
+import AfroLaje from '../../static/imagens/AfroLaje-M.jpg'
 import AlexandreFotografia_Logo from '../../static/imagens/AlexandreFotografia-Logo.jpg'
 import BrigadeirosLiterarios from '../../static/imagens/BrigadeirosLiterarios.jpg'
 import CRJ_Logo from '../../static/imagens/CRJ-Logo.jpg'
@@ -975,7 +975,6 @@ export default{
 	width: 100%;
 	margin: 0; 
 	padding: 5px 15px;
-	/*padding-left: 15px;*/
 	position: relative;
 	background-color: rgb(244, 100, 36);
 	font-family: ministry, sans-serif;
@@ -1008,7 +1007,6 @@ export default{
 	min-height: 5vh;
 	max-height: 50vh;
 	overflow: hidden;
-	background-color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1017,8 +1015,6 @@ export default{
 .formatMobile{
 	display: none;
 	max-height: 50vh;
-
-	background-color: red;
 }
 @media(max-width: 640px){
 	.formatDesktop{
