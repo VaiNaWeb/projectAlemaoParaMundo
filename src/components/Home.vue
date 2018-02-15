@@ -80,6 +80,7 @@
 				:subSegmento="subSegmento"
 				:selectAtividade="selectAtividade"
 				:nomeAtividade="nomeAtividade"
+				v-show="segmento"
 				v-if="alterar" 
 				@alterar="selecionarAtividades"
 				@selectAtividade="value => {selectAtividade = value}" 
