@@ -603,20 +603,13 @@ export default{
 	}
 }
 .cabecalhoMobile-menu{
-	width: 90%;
+	width: 100%;
 	min-height: 55vh;
 	margin-top: 28px;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-end;
+	justify-content: space-around;
 	align-items: flex-start;
-}
-@media(max-width: 400px){
-	.cabecalhoMobile-menu{
-		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
-	}
 }
 .cabecalhoMobileMenu-btn{
 	width: 49%;
@@ -636,12 +629,13 @@ export default{
 	align-items: center;
 }
 .cabecalhoMobileMenu-btn:focus{
-	background-color: #f26522
+	background-color: #f26522;
+	outline:none;
 }
-
 @media(max-width: 400px){
 	.cabecalhoMobileMenu-btn{
-		width: 90%;
+		width: 48%;
+		max-width: auto;
 		margin:5px 0;
 	}
 }
@@ -651,9 +645,20 @@ export default{
 	justify-content: center;
 	align-items: center;
 }
+@media(max-width: 640px){
+	.cabecalhoMobileMenuBtn-div{
+		width: 25%;
+	}
+}
 .menuBtnDiv-icon{
-	height: 45px;
+	height: 40px;
 	margin: 10px;
+}
+@media(max-width: 640px){
+	.menuBtnDiv-icon{
+		height: 33px;
+		margin: 0;
+	}
 }
 .cabecalhoMobileMenuBtn-segmento{
 	width: 75%;
@@ -664,9 +669,15 @@ export default{
 	color:#fff;
 	text-align: left;
 }
+@media(max-width: 640px){
+	.cabecalhoMobileMenuBtn-segmento{
+		width: 90%;
+		padding-left: 12%;
+		font-size: 0.75em;
+	}
+}
 
 /* Atividade */
-
 .containerAtividade{
 	width: 100%;
 	min-height: 100vh;

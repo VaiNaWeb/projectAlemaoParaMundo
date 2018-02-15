@@ -65,7 +65,8 @@ import ViDancar from '../../static/imagens/ViDancar-D.jpg'
 // Fim imagens
 
 import VueScrollbar from 'vue2-scrollbar'
-require("vue2-scrollbar/dist/style/vue2-scrollbar.css")
+// require("vue2-scrollbar/dist/style/vue2-scrollbar.css")
+require("../../static/css/VueScrollbar.css")
 
 export default{
 	name:'ListaAtividades',
@@ -354,6 +355,9 @@ export default{
 		selecionarAtividade(value){
 			this.$emit('alterar')
 			this.$emit('selectAtividade', value)
+		},
+		someMethod(){
+			this.$refs.Scrollbar.scrollToY(0)
 		}
 	},
 	components:{ 
@@ -368,36 +372,37 @@ export default{
 #listaAtividades{
 	width: 40%;
 	max-width: 600px;
-
-	height: 100vh;
+	height: 90vh;
 	margin-right: auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: flex-start;	
 }
+@media (max-width: 640px){
+	#listaAtividades{
+		width: 90%;
+		margin-right: 0;
+	}
+}
 /*The Wrapper*/
 .my-scrollbar{
 	width: 100%;
 	min-width: 300px;
-	max-height: 100vh;
+	max-height: 90vh;
+	margin-top: 20px;
 }
 @media (max-width: 640px){
 	.my-scrollbar{
-		height: 85vh;
+		height: 80vh;
+		margin-top: 10px;
 	}
 }
-@media (max-width: 400px){
+/*@media (max-width: 400px){
 	.my-scrollbar{
-		height: 83vh;
+		height: 80vh;
 	}
-}
-@media (max-width: 640px){
-	#listaAtividades{
-		max-width: 95%;
-		margin-right: 0;
-	}
-}
+}*/
 .conteudo{
 	width:100%;
     min-height: 100vh;
@@ -407,7 +412,7 @@ export default{
 }
 .conteudo-atividades{
 	width: 100%;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	margin-right: 10px;
 }
 @media (max-width: 400px){
