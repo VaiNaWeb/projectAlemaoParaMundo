@@ -902,7 +902,6 @@ export default{
 		subcategoriaFiltradas(){
 			const subSegmento = this.subcategorias
 				.filter(subcategoria => subcategoria.categoria === this.categoria)	
-
 				if(subSegmento){
 					return this.subcategoria.subcategoria
 				}
@@ -1081,8 +1080,10 @@ export default{
 	min-width: 240px;
 	width: 40%;
 }
-@media(max-width: 1290px){
+@media(max-width: 1307px){
 	.infoSobreConteudo-div{
+		min-width: 90%;
+		width: auto;
 		max-width: 100%;
 	}
 	.sobreConteudo-divIcon{

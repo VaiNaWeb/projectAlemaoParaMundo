@@ -394,7 +394,7 @@ export default{
 }
 @media (max-width: 640px){
 	.my-scrollbar{
-		height: 80vh;
+		height: 75vh;
 		margin-top: 10px;
 	}
 }
