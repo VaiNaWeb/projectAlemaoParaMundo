@@ -37,21 +37,21 @@
 								{{ atividade.telefone }}
 							</p>
 							<img class="infoSobreConteudoDiv-icon" src="../../static/assets/facebook.svg" v-show="atividade.facebook">
-							<a :href="facebookLink"
+							<a :href="atividade.facebookLink"
 								target="_blank"
 								class="infoSobreConteudoDiv-text"
 								v-show="atividade.facebook">
 								 {{ atividade.facebook }}
 							</a>
 							<img class="infoSobreConteudoDiv-icon" src="../../static/assets/instagram.svg" v-show="atividade.instagram">
-							<a :href="instagramLink" 
+							<a :href="atividade.instagramLink" 
 								target="_blank" 
 								class="infoSobreConteudoDiv-text"
 								v-show="atividade.instagram">
 								{{ atividade.instagram }}
 							</a>
 							<img class="infoSobreConteudoDiv-icon" src="../../static/assets/instagram.svg" v-show="atividade.twitter">
-							<a :href="twitterLink"
+							<a :href="atividade.twitterLink"
 								target="_blank"
 								class="infoSobreConteudoDiv-text"
 								v-show="atividade.instagram">
@@ -1142,7 +1142,7 @@ export default{
 
 .atividadeContainerLocal-conteudo{
 	width: 100%;
-	min-height: 40vh;
+	min-height: 5vh;
 	background-color: #fff;
 	border-radius: 0 20px 20px 20px;
 	display: flex;
@@ -1152,11 +1152,18 @@ export default{
 	justify-content: center;
 }
 .containerLocalConteudo-mapa{
-	width: 80%;
+	width: 90%;
 	height: 220px;
 	margin: 20px 0;
 }
 .containerLocalConteudo-endereco{
-
+	width: 90%;
+	margin: 20px;
+	margin-top: 0;
+	font-family: ministry, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	color: #2e3192;
 }
 </style>

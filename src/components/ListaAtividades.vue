@@ -3,8 +3,17 @@
 <!-- <link rel="stylesheet" href="../../static/css/VueScrollbar.css"> -->
 	<VueScrollbar class="my-scrollbar" ref="Scrollbar">
 		<main class="conteudo">
-			<section  class="conteudo-atividades">
-				<div v-for="atividade in atividadesFiltradas" @click="selecionarAtividade(atividade.nome)">
+			<section  class="conteudo-atividades" id="topList">
+				<div class="conteudoAtividades-item" v-if="erro">
+					<img class="atividadesItem-foto" 
+						src="../../static/assets/erro.png">
+					<div class="atividadesItem-mask">
+						<p class="atividadesItem-nome">Não há atividade nesta categoria!</p>
+					</div>
+				</div>
+				<div v-for="atividade in atividadesFiltradas"
+					@click="selecionarAtividade(atividade.nome)"
+					v-else>
 					<div class="conteudoAtividades-item">
 						<img class="atividadesItem-foto" v-bind:src="atividade.imagem">
 						<div class="atividadesItem-mask">
@@ -21,6 +30,7 @@
 
 <script>
 // Import imagens
+import erro from '../../static/assets/erro.png'
 import AbracoCampeao_Logo from '../../static/imagens/AbracoCampeao-Logo.jpg'
 import AfroLaje from '../../static/imagens/AfroLaje-D.jpg'
 import AlexandreFotografia_Logo from '../../static/imagens/AlexandreFotografia-Logo.jpg'
@@ -77,7 +87,8 @@ export default{
 		},
 		subSegmento:String,
 		selectAtividade:String,
-		nomeAtividade:String
+		nomeAtividade:String,
+		erro:Boolean
 	},
 	data(){
 		return{
@@ -337,15 +348,18 @@ export default{
 
 			if (this.segmento){
 				atividades = atividades.filter(atividade => atividade.segmento === this.segmento)
-				if (this.subSegmento){
+				if(this.subSegmento){
 					atividades = atividades.filter(atividade => atividade.subSegmento === this.subSegmento)
+					if(atividades.length == 0){
+						this.erro = true	
+					}
 				}
 			}
 			if (this.nomeAtividade) {
 				atividades = atividades.filter(atividade => atividade.nome.toLowerCase().indexOf(this.nomeAtividade.toLowerCase()) >= 0) 
 			}
 			if(!this.segmento && !this.nomeAtividade){
-				return null
+				return atividades = atividades.filter(atividade => atividade.subSegmento === this.subSegmento)
 			}
 				
 			return atividades
@@ -355,9 +369,6 @@ export default{
 		selecionarAtividade(value){
 			this.$emit('alterar')
 			this.$emit('selectAtividade', value)
-		},
-		someMethod(){
-			this.$refs.Scrollbar.scrollToY(0)
 		}
 	},
 	components:{ 
@@ -391,6 +402,7 @@ export default{
 	min-width: 300px;
 	max-height: 90vh;
 	margin-top: 20px;
+
 }
 @media (max-width: 640px){
 	.my-scrollbar{
@@ -398,14 +410,9 @@ export default{
 		margin-top: 10px;
 	}
 }
-/*@media (max-width: 400px){
-	.my-scrollbar{
-		height: 80vh;
-	}
-}*/
 .conteudo{
 	width:100%;
-    min-height: 100vh;
+    min-height: 90vh;
     margin-right: 5px;
     display: flex;
     align-items: flex-start;
@@ -453,7 +460,7 @@ export default{
 }
 .atividadesItem-nome{
 	position: relative;
-	bottom: 1%;
+	bottom: 4%;
 	left: 5%;
 	font-family: ministry, sans-serif;
 	font-style: normal;

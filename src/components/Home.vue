@@ -90,10 +90,8 @@
 				@alterar="value => {alterar = value}"
 				v-else
 			></Atividade>
-			<section 
-				class="cabecalhoContainer-filtros"
-				v-show='subSegmentosFiltrados'
-			>
+			<section class="cabecalhoContainer-filtros"
+				v-show='subSegmentosFiltrados'>
 				<p class="cabecalhoContainerFiltros-item"
 					v-for="subSegmento in subSegmentosFiltrados"
 					@click="setsubSegmento(subSegmento)"
@@ -199,6 +197,7 @@
 				:subSegmento="subSegmento"
 				:selectAtividade="selectAtividade"
 				:nomeAtividade="nomeAtividade"
+				:erro="erro"
 				v-if="alterar" 
 				@alterar="selecionarAtividades"
 				@selectAtividade="value => {selectAtividade = value}" 
@@ -281,6 +280,7 @@ export default{
 			ocultarDescricao:true,
 			selectAtividade: '',
 			nomeAtividade:'',
+			erro:false,
 			segmentos: [
 					{
 						nome: 'Alimentação',
@@ -288,7 +288,8 @@ export default{
 							'Restaurante', 
 							'Lanches', 
 							'Doceria',
-							'Festas'
+							'Festas',
+							'Todos'
 						]
 					},
 					{
@@ -301,7 +302,8 @@ export default{
 							'Teatro',
 							'Fotografia',
 							'Educação',
-							'Eventos'
+							'Eventos',
+							'Todos'
 						]
 					},
 					{
@@ -309,7 +311,8 @@ export default{
 						subSegmentos: [
 							'Cabelo',
 							'Maquiagem',
-							'Corpo'				
+							'Corpo',
+							'Todos'			
 						]
 					},
 					{
@@ -322,7 +325,8 @@ export default{
 							'Produção',
 							'Cultura',
 							'Moda',
-							'Poesia'
+							'Poesia',
+							'Todos'
 						]
 					},
 					{
@@ -330,7 +334,8 @@ export default{
 						subSegmentos: [
 							'Tecnologia',
 							'Infantil',
-							'Comunicação'
+							'Comunicação',
+							'Todos'
 						]
 					},
 					{
@@ -339,7 +344,8 @@ export default{
 							'Arte Marcial',
 							'Academia',
 							'Futebol',
-							'Funcional'
+							'Funcional',
+							'Todos'
 						]
 					},
 					{
@@ -347,7 +353,8 @@ export default{
 						subSegmentos: [
 							'Cidania e Desenvolvimento',
 							'Educação e Cultura',
-							'Assistencia Social'
+							'Assistencia Social',
+							'Todos'
 						]
 					},
 					{
@@ -355,7 +362,8 @@ export default{
 						subSegmentos: [
 							'Fisioterapia',
 							'Laboratorio',
-							'Clinica'
+							'Clinica',
+							'Todos'
 						]
 					},
 					{
@@ -366,7 +374,8 @@ export default{
 							'Design',
 							'Fotografia',
 							'Gráfica',
-							'Produção'
+							'Produção',
+							'Todos'
 						]
 					},
 					{
@@ -376,7 +385,8 @@ export default{
 							'Táxi',
 							'Ônibus',
 							'Van',
-							'Kombi'
+							'Kombi',
+							'Todos'
 						]
 					}
 				]
@@ -413,10 +423,19 @@ export default{
 		},
 		setsubSegmento(value){
 			this.subSegmento = value
-			
+
+			if(this.subSegmento === 'Todos'){
+				this.subSegmento = ''
+			}
+
 			if(this.alterar === false){
 				this.alterar = true
 			}
+
+			if(this.drop === true){
+				this.drop = false
+			}
+
 		},
 		selecionarAtividades(){
 			this.alterar = !this.alterar
@@ -731,7 +750,7 @@ export default{
 	min-height: 45px;
 	padding: 2% 5%;
 	margin-bottom: 15px;
-	border-radius: 30px;
+	border-radius: 20px;
 	background: #fff;
 	position: relative;
 	display: flex;
@@ -741,7 +760,7 @@ export default{
 }
 .cabecalhoMobileForm-menuHamburger{''
 	width: 5%;
-	margin: 0 auto;
+	margin: 0;
 	color:#000;
 	font-size: 19px;
 }
@@ -864,10 +883,12 @@ export default{
 	min-height: 70vh;
 	padding: 2%;
 	background-color: #f26522;
+	align-self: flex-end;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
-	justify-content: center;
+	align-content: center;
+	justify-content: space-around;
 }
 .rodape{
 	width: 100%;
@@ -880,18 +901,14 @@ export default{
 		min-width: auto;
 		max-width: 100%;
 		min-height: 30vh;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		align-content: flex-start;
 	}
 }
-/*@media(max-width: 640px){
-	.rodape{
-		max-width: 90%;
-	}
-}*/
 .rodape-linkIcon{
-	margin: 20%;
+	min-width: 10%;
+	margin: 15% 20%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -901,34 +918,35 @@ export default{
 }
 @media(max-width: 1250px){
 	.rodape-linkIcon{
-		margin: 10px auto;
+		width: 25%;
+		margin: 10px ;
 	}
 }
 .rodape-logo1sti{
-	width: 40%;
-	min-width: 70px;
+	width: 55%;
+	/*min-width: 30px;*/
 }
 @media(max-width: 1250px){
 	.rodape-logo1sti{
-		min-width: auto;
+		width: 35%;
 	}
 }
 .rodape-logoEducap{
-	width: 70%;
-	min-width: 150px;
+	width: 100%;
+	/*min-width: 50px;*/
 }
 @media(max-width: 1250px){
 	.rodape-logoEducap{
-		min-width: auto;
+		width: 100%;
 	}
 }
 .rodape-logoPrecisa{
-	width: 70%;
-	min-width: 150px;
+	width: 100%;
+	/*min-width: 50px;*/
 }
 @media(max-width: 1250px){
 	.rodape-logoPrecisa{
-		min-width: auto;
+		width: 100%;
 	}
 }
 </style>
